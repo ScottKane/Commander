@@ -1,0 +1,68 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "Pty.Net/1.0.0": {
+        "dependencies": {
+          "MicroBuild.VisualStudio": "2.0.55",
+          "StyleCop.Analyzers": "1.1.118"
+        },
+        "runtime": {
+          "Pty.Net.dll": {}
+        }
+      },
+      "MicroBuild/2.0.55": {
+        "dependencies": {
+          "MicroBuild.Core": "0.3.0"
+        }
+      },
+      "MicroBuild.Core/0.3.0": {},
+      "MicroBuild.VisualStudio/2.0.55": {
+        "dependencies": {
+          "MicroBuild": "2.0.55"
+        }
+      },
+      "StyleCop.Analyzers/1.1.118": {}
+    }
+  },
+  "libraries": {
+    "Pty.Net/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MicroBuild/2.0.55": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1cxNSpMT6SpSbsdS7cmVkJ7N6KURUwfZdwNUzWolnrtNV4TV8nY+bea/0V5hHHofMVj2K1D9UwIx7w9hJEoT9A==",
+      "path": "microbuild/2.0.55",
+      "hashPath": "microbuild.2.0.55.nupkg.sha512"
+    },
+    "MicroBuild.Core/0.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-71NxN8xP8+n08w7XuEOpbzuerL45QRodeLfrjs51qCT8LbjARyfPEcSE30YqLjFtFl3km5eH5Oaqnq2p1hQbAw==",
+      "path": "microbuild.core/0.3.0",
+      "hashPath": "microbuild.core.0.3.0.nupkg.sha512"
+    },
+    "MicroBuild.VisualStudio/2.0.55": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sTHSXlgvNmtGOus1prRs0WvrFrH/xlxm3btnRAx0ef4SA8RpH3ZPsP9GdnhbX0SEHYcnELcODcyAN37wQ779Hw==",
+      "path": "microbuild.visualstudio/2.0.55",
+      "hashPath": "microbuild.visualstudio.2.0.55.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.1.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+      "path": "stylecop.analyzers/1.1.118",
+      "hashPath": "stylecop.analyzers.1.1.118.nupkg.sha512"
+    }
+  }
+}
