@@ -5,6 +5,7 @@ using CliFx;
 using CliFx.Attributes;
 using CliFx.Infrastructure;
 using Pty.Net;
+using SteamCMD.ConPTY;
 
 namespace Commander.Commands;
 
@@ -19,7 +20,7 @@ public class InstallCommand : SteamCmdCommand, ICommand
         IsRequired = true)]
     public string? GameId { get; init; }
     
-    private async ValueTask OutputAsync(IConsole console, IPtyConnection connection, string line)
+    private async ValueTask OutputAsync(IConsole console, SteamCMDConPTY connection, string line)
     {
         if (!string.IsNullOrWhiteSpace(line))
         {
@@ -35,9 +36,9 @@ public class InstallCommand : SteamCmdCommand, ICommand
                     var buffer = Encoding.ASCII.GetBytes(input + Environment.NewLine);
                     // _output.TryAdd(input!, true);
 
-                    await connection.WriterStream.WriteAsync(buffer);
-                    _ = await connection.ReaderStream.ReadAsync(buffer);
-                    await connection.WriterStream.FlushAsync();
+                    await connection.WriteAsync(input);
+                    // _ = await connection.ReadAsync(buffer);
+                    // await connection.WriterStream.FlushAsync();
                     _output[line] = true;
                     
                     return;
@@ -50,7 +51,7 @@ public class InstallCommand : SteamCmdCommand, ICommand
         }
     }
 
-    protected override async ValueTask ParseAsync(IConsole console, IPtyConnection connection, string? line)
+    protected override async ValueTask ParseAsync(IConsole console, SteamCMDConPTY connection, string? line)
     {
         line = line switch
         {

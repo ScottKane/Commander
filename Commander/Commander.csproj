@@ -6,8 +6,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <PublishSingleFile>true</PublishSingleFile>
         <SelfContained>true</SelfContained>
-<!--        <RuntimeIdentifier>linux-x64</RuntimeIdentifier>-->
-        <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+        <RuntimeIdentifier>linux-x64</RuntimeIdentifier>
+<!--        <RuntimeIdentifier>win-x64</RuntimeIdentifier>-->
         <PublishReadyToRun>true</PublishReadyToRun>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
@@ -25,6 +25,7 @@
     <ItemGroup>
       <PackageReference Include="CliFx" Version="2.2.0" />
       <PackageReference Include="ShellProgressBar" Version="5.1.0" />
+      <PackageReference Include="SteamCMD.ConPTY" Version="1.2.0" />
     </ItemGroup>
 
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
